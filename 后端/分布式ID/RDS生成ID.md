@@ -1,5 +1,8 @@
+**一、逻辑图**
+
 ![](https://agam-blog-image.oss-cn-hangzhou.aliyuncs.com/db_auto_increase.png)
 
+**二、概要说明**
 ```
 // 步长
 auto_increment_increment 
