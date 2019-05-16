@@ -4,14 +4,17 @@
 
 **二、说明**
 
-**参数**
+**a、参数**
+```
+// 步长
+auto_increment_increment 
 
-* auto_increment_increment // 步长
-* auto_increment_offset // 起点
+// 起点
+auto_increment_offset 
 
-Tip：上述参数可以进行session级别与全局级别两种方式设置
-
-**表**
+// Tip：上述参数可以进行session级别与全局级别两种方式设置
+```
+**b、序列表**
 ```
 CREATE TABLE id_generator (
     seqid bigint(20) unsigned NOT NULL auto_increment,
@@ -20,7 +23,7 @@ CREATE TABLE id_generator (
     UNIQUE KEY seqname (seqname)
 ) ENGINE=INNODB;
 ```
-**存储过程**
+**c、存储过程**
 ```
 begin;
     REPLACE INTO id_generator(seqname) VALUES ('lottery_order');
