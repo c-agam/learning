@@ -12,17 +12,18 @@
 Tip：上述参数可以进行session级别与全局级别两种方式设置
 
 **表**
-
+```
 CREATE TABLE id_generator (
     seqid bigint(20) unsigned NOT NULL auto_increment,
     seqname varchar(50) NOT NULL default '',
     PRIMARY KEY (seqid),
     UNIQUE KEY seqname (seqname)
 ) ENGINE=INNODB;
-
+```
 **存储过程**
-
+```
 begin;
     REPLACE INTO id_generator(seqname) VALUES ('lottery_order');
     SELECT LAST_INSERT_ID();
 commit;
+```
