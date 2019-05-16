@@ -14,7 +14,7 @@ auto_increment_offset
 
 // Tip：上述参数可以进行session级别与全局级别两种方式设置
 ```
-**b、序列表**
+**b、表结构**
 ```
 CREATE TABLE id_generator (
     seqid bigint(20) unsigned NOT NULL auto_increment,
