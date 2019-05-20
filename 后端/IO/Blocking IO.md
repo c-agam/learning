@@ -84,3 +84,26 @@ public class Client {
     }
 }
 ```
+**三、总结**
+```
+/**
+ * channel is in blocking mode and there is at least one byte
+ * remaining in the buffer then this method will block until at least one
+ * byte is read.
+ */
+ public int read(ByteBuffer dst);
+
+/*
+ * Unless otherwise specified, a write operation will return only after
+ * writing all of the r requested bytes.  Some types of channels,
+ * depending upon their state, may write only some of the bytes or possibly
+ * none at all.
+ */
+ public int write(ByteBuffer src) throws IOException;
+ 
+ /**
+ * it will block indefinitely until a new connection is available
+ * or an I/O error occurs.
+ */
+ public abstract SocketChannel accept() throws IOException;
+```
