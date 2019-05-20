@@ -5,7 +5,7 @@
 **二、代码演示**
 ```
 // C端
-public class Client throw Exception {
+public class Client throws Exception {
     public static void main(String[] args) {
         SocketChannel socketChannel = SocketChannel.open();
         // 设置为非阻塞
