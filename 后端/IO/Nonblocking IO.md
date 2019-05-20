@@ -54,3 +54,24 @@ public class Server {
     }
 }
 ```
+
+**三、总结**
+```
+/**
+ * A socket channel in non-blocking mode cannot read any more bytes than are immediately available
+ * from the socket's input buffer;
+ */
+public int read(ByteBuffer dst) throws IOException;
+
+/**
+ * A socket channel in non-blocking mode cannot
+ * write any more bytes than are free in the socket's output buffer.
+ */
+public int write(ByteBuffer src) throws IOException;
+
+/**
+ * A socket channel is in non-blocking mode then this method will
+ * immediately return <tt>null</tt> if there are no pending connections.
+ */
+public abstract SocketChannel accept() throws IOException;
+```
